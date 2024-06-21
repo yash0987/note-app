@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div id="modalBox">
+        <div class="modal">
+            <h2 style="display: flex; margin-bottom: 10px;">Note &nbsp;<p id="noteNumber"> </p></h2>
+            New Title
+            <input type="text" name="newTitle" id="newTitle">
+            New Description
+            <textarea name="newDescription" id="newDescription" cols="97" rows="5"></textarea>
+            <button class="btn">Update Note</button>
+            <button class="btn" id="close">Close</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div style="margin: 15px 0px;">
+            <div class="inputNote">
+                <h1>Add a Note to iNotes</h1>
+                <div class="noteComponent">
+                    <p>Note Title</p>
+                    <input type="text" name="noteName" id="nName">
+                </div>
+                <div class="noteComponent">
+                    <p>Note Description</p>
+                    <textarea name="noteContent" id="nDescription" cols="73" rows="20"></textarea>
+                </div>
+                <button type="submit" class="btn" data-key="addNoteBtn">Add Note</button>
+                <button class="btn" data-key="clearBtn">Clear</button>
+            </div>
+        </div>
+
+        <div style="width: 100%;">
+            <div class="featuresSection">
+                <div style="display: flex; justify-content: space-between;">
+                    <section id="dropSection">
+                        <p style="margin-top: 9px;">Show Notes:</p>
+                        <div id="dropBox">
+                            <div id="selectionBox" style="display: flex; justify-content: space-around;">
+                                <div id="dropbar">ALL</div><span>&#9662;</span>
+                            </div>
+                            <ul id="droplist">
+                                <li class="drop-item">5</li>
+                                <li class="drop-item">10</li>
+                                <li class="drop-item">20</li>
+                                <li class="drop-item">ALL</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <input type="text" name="search" id="searchBox" placeholder="Search">
+                </div>
+
+                <div class="columnNames">
+                    <div class="notecolumn">
+                        <div class="grid-item sort" style="font-weight: bold">S.No</div>
+                        <span>
+                            <div class="sortBtn" key="1">&#9652;</div>
+                            <div class="sortBtn" key="-1">&#9662;</div>
+                        </span>
+                    </div>
+                    <div class="notecolumn">
+                        <div class="grid-item sort" style="font-weight: bold">Title</div>
+                        <span>
+                            <div class="sortBtn" key="1">&#9652;</div>
+                            <div class="sortBtn" key="-1">&#9662;</div>
+                        </span>
+                    </div>
+                    <div class="notecolumn">
+                        <div class="grid-item sort" style="font-weight: bold">Description</div>
+                        <span>
+                            <div class="sortBtn" key="1">&#9652;</div>
+                            <div class="sortBtn" key="-1">&#9662;</div>
+                        </span>
+                    </div>
+                    <div class="grid-item" style="font-weight: bold">Actions</div>
+                </div>
+            </div>
+            <div class="outputNote"></div>
+            <div class="prevNextNotes">
+                <button class="prevNotes">Prev</button>
+                <button class="nextNotes">Next</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
